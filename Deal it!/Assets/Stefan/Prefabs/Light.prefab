@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.28817853, y: 0, z: 0}
-  m_LocalScale: {x: 0.70946604, y: 0.80201, z: 0.80201}
+  m_LocalScale: {x: 0.45894852, y: 0.36886922, z: 0.36886922}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4164801628563303384}
@@ -236,11 +236,11 @@ MonoBehaviour:
     m_NumColorKeys: 8
     m_NumAlphaKeys: 2
   speed: 0.2
+  emission: 2.3
+  minMaxStartOffset: {x: 0, y: 1}
   lightRenderer: {fileID: 8610123042594468969}
   emissionRenderer: {fileID: 8558592812240866056}
   ligth: {fileID: 1906505532169905551}
-  color: {r: 0, g: 0, b: 0, a: 0}
-  minMaxStartOffset: {x: 0, y: 1}
 --- !u!65 &4938353505005509808
 BoxCollider:
   m_ObjectHideFlags: 0

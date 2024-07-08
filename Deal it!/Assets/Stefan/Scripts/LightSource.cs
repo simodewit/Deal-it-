@@ -6,21 +6,24 @@ using UnityEngine;
 
 public class LightSource : MonoBehaviour
 {
+    [Header("Light Settings")]
     public Gradient colorGradient;
 
     public float speed = 0.2f;
+    public float emission = 2.3f;
+    public Vector2 minMaxStartOffset;
 
+    [Header("References")]
     public MeshRenderer lightRenderer;
     public MeshRenderer emissionRenderer;
     public Light ligth;
 
-    public Color color;
+    Color color;
     Material m_emissionMaterial;
     Material m_lightBeamMaterial;
 
     float m_currentTime;
 
-    public Vector2 minMaxStartOffset;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +48,9 @@ public class LightSource : MonoBehaviour
         m_lightBeamMaterial.SetColor ("_Light_Color", color);
         m_lightBeamMaterial.SetColor ("_Emission", color);
 
-        m_emissionMaterial.SetColor ("_Color", color);
+        m_emissionMaterial.color = color;
         m_emissionMaterial.SetColor ("_Emission", color);
+
+        ligth.color = color;
     }
 }
