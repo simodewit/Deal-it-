@@ -523,9 +523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2048bcf8d21feb94988eed67f31d8040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dealer: {fileID: 0}
   dealerText: {fileID: 596173820859132044}
   clientText: {fileID: 7947589115052199932}
-  scanDistance: 5
+  scanDistance: 10
   currentCocaine: 0
 --- !u!1 &7906128787860925582
 GameObject:
@@ -542,6 +543,7 @@ GameObject:
   - component: {fileID: 7611788648904647847}
   - component: {fileID: 4664093709904205815}
   - component: {fileID: 6084640196353066309}
+  - component: {fileID: 6447032752315223740}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -756,6 +758,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c9f27153-2764-4389-a7c3-1862bb3aa8d3
     m_ActionName: Movement/HorizontalRotation[/Mouse/delta/up,/Mouse/delta/down]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8768441886367476038}
+        m_TargetAssemblyTypeName: Interactor, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5667ced7-7ce7-435b-a129-12c1be795983
+    m_ActionName: Movement/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movement
@@ -775,4 +793,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 6360397488183974417}
   moveSpeed: 10
-  rotateSpeed: 5
+  rotateSpeed: 10
+--- !u!114 &6447032752315223740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906128787860925582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c080135b4b654f41aec9468521bfa33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

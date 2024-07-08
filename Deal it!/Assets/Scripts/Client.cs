@@ -29,7 +29,7 @@ public class Client : MonoBehaviour
     public void TurnOn()
     {
         isMainClient = true;
-        cocaineAsked = Random.Range(0, maxCocaine);
+        cocaineAsked = Random.Range(1, maxCocaine);
     }
 
     public void TurnOff()

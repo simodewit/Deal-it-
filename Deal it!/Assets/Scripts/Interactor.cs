@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,14 +9,17 @@ public class Interactor : MonoBehaviour
 {
     #region variables
 
+    [SerializeField] private Dealer dealer;
     [SerializeField] private TextMeshProUGUI dealerText;
     [SerializeField] private TextMeshProUGUI clientText;
     [SerializeField] private float scanDistance = 5;
 
-    [HideInInspector] public int currentCocaine;
+    /*[HideInInspector] */public int currentCocaine;
 
     private Client client;
-    private Dealer dealer;
+
+    private bool canGrab;
+    private bool canGive;
 
     #endregion
 
@@ -24,6 +28,7 @@ public class Interactor : MonoBehaviour
     private void Update()
     {
         ScanForInteraction();
+        UpdateText();
     }
 
     #endregion
@@ -37,19 +42,40 @@ public class Interactor : MonoBehaviour
             return;
         }
 
-        if (clientText.enabled)
-        {
-            if(client.cocaineAsked > currentCocaine)
-            {
-                return;
-            }
-
-            client.TurnOff();
-            currentCocaine -= client.cocaineAsked;
-        }
-        else if (dealerText.enabled)
+        if (canGrab)
         {
             currentCocaine += dealer.batchAmount;
+        }
+
+        if (canGive)
+        {
+            canGive = false;
+            currentCocaine -= client.cocaineAsked;
+            client.TurnOff();
+            client = null;
+        }
+    }
+
+    #endregion
+
+    #region text
+
+    private void UpdateText()
+    {
+        if (canGrab)
+        {
+            dealerText.gameObject.SetActive(true);
+            clientText.gameObject.SetActive(false);
+        }
+        else if (canGive)
+        {
+            dealerText.gameObject.SetActive(false);
+            clientText.gameObject.SetActive(true);
+        }
+        else
+        {
+            dealerText.gameObject.SetActive(false);
+            clientText.gameObject.SetActive(false);
         }
     }
 
@@ -63,16 +89,14 @@ public class Interactor : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, scanDistance))
         {
             Dealer hitDealer = hit.transform.GetComponent<Dealer>();
+            Client hitClient = hit.transform.GetComponent<Client>();
+
             if (hitDealer != null)
             {
-                dealer = hitDealer;
-                clientText.enabled = false;
-                dealerText.enabled = true;
-                return;
+                canGive = false;
+                canGrab = true;
             }
-
-            Client hitClient = hit.transform.GetComponent<Client>();
-            if (hitClient != null)
+            else if (hitClient != null)
             {
                 if (!hitClient.isMainClient)
                 {
@@ -80,9 +104,13 @@ public class Interactor : MonoBehaviour
                 }
 
                 client = hitClient;
-
-                clientText.enabled = true;
-                dealerText.enabled = false;
+                canGrab = false;
+                canGive = true;
+            }
+            else
+            {
+                canGrab = false;
+                canGive = false;
             }
         }
     }
