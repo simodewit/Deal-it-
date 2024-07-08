@@ -774,6 +774,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5667ced7-7ce7-435b-a129-12c1be795983
     m_ActionName: Movement/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6084640196353066309}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: Running
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7893aabd-be4d-4c95-9263-357ef22a14bb
+    m_ActionName: Movement/Run[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movement
@@ -792,7 +808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 6360397488183974417}
-  moveSpeed: 10
+  walkSpeed: 7
+  runSpeed: 10
   rotateSpeed: 10
 --- !u!114 &6447032752315223740
 MonoBehaviour:

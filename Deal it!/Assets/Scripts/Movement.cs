@@ -9,7 +9,8 @@ public class Movement : MonoBehaviour
     #region variables
 
     [SerializeField] private Transform cam;
-    [SerializeField] private float moveSpeed = 10;
+    [SerializeField] private float walkSpeed = 7;
+    [SerializeField] private float runSpeed = 10;
     [SerializeField] private float rotateSpeed = 5;
 
     private Rigidbody rb;
@@ -17,6 +18,7 @@ public class Movement : MonoBehaviour
     private float verticalMovement;
     private float horizontalRotation;
     private float verticalRotation;
+    private float speed;
 
     #endregion
 
@@ -24,6 +26,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
+        speed = walkSpeed;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -62,6 +65,18 @@ public class Movement : MonoBehaviour
         verticalRotation = context.ReadValue<float>();
     }
 
+    public void Running(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            speed = runSpeed;
+        }
+        if (context.canceled)
+        {
+            speed = walkSpeed;
+        }
+    }
+
     #endregion
 
     #region Movement
@@ -69,7 +84,7 @@ public class Movement : MonoBehaviour
     private void Move()
     {
         Vector3 input = new Vector3(horizontalMovement, 0, verticalMovement);
-        rb.AddRelativeForce(input * moveSpeed);
+        rb.AddRelativeForce(input * speed);
     }
 
     #endregion
