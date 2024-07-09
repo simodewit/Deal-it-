@@ -12,6 +12,8 @@ public class LightSource : MonoBehaviour
     public float speed = 0.2f;
     public float emission = 2.3f;
     public Vector2 minMaxStartOffset;
+    public float flickerSpeed = 13;
+    public Vector2 minMaxIntensity;
 
     [Header("References")]
     public MeshRenderer lightRenderer;
@@ -52,5 +54,9 @@ public class LightSource : MonoBehaviour
         m_emissionMaterial.SetColor ("_EmissionColor", color);
 
         ligth.color = color;
+
+        float flickerStrength = Mathf.PerlinNoise1D (Time.time * flickerSpeed) + 1 / 2;
+
+        ligth.intensity = Mathf.Lerp (minMaxIntensity.x, minMaxIntensity.y, flickerStrength);
     }
 }
