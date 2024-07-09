@@ -49,7 +49,7 @@ public class LightSource : MonoBehaviour
         m_lightBeamMaterial.SetColor ("_Emission", color);
 
         m_emissionMaterial.color = color;
-        m_emissionMaterial.SetColor ("_Emission", color);
+        m_emissionMaterial.SetColor ("_EmissionColor", color);
 
         ligth.color = color;
     }
