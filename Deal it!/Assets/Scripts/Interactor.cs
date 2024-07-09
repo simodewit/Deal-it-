@@ -49,6 +49,11 @@ public class Interactor : MonoBehaviour
 
         if (canGive)
         {
+            if (currentCocaine < client.cocaineAsked)
+            {
+                return;
+            }
+
             canGive = false;
             currentCocaine -= client.cocaineAsked;
             client.TurnOff();

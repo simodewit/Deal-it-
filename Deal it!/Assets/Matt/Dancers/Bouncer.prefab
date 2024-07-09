@@ -74,7 +74,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 635547659545568360, guid: 8fd469d6720257c4e91c297abae4fbf1,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1268473586005129825}
+      addedObject: {fileID: 4107833707650162441}
+    - targetCorrespondingSourceObject: {fileID: 635547659545568360, guid: 8fd469d6720257c4e91c297abae4fbf1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4868720464296330117}
     - targetCorrespondingSourceObject: {fileID: 4101161180453605438, guid: 8fd469d6720257c4e91c297abae4fbf1,
         type: 3}
       insertIndex: -1
@@ -113,8 +117,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8807991597233332780}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1268473586005129825
-BoxCollider:
+--- !u!64 &4107833707650162441
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,9 +135,37 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.11, y: 0.97, z: 1.9718581}
-  m_Center: {x: 0.09371351, y: 0.21, z: -0.68812525}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!54 &4868720464296330117
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281467198686135876}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &8574058060802875261 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8fd469d6720257c4e91c297abae4fbf1,
