@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Events;
-using static UnityEngine.Rendering.DebugUI;
 
 public class UISelector : MonoBehaviour
 {
@@ -14,7 +10,7 @@ public class UISelector : MonoBehaviour
 
     public TextMeshProUGUI textElement;
 
-    public string[] options = new string[]{"1","2","3"};
+    public string[] options = new string[] { "1", "2", "3" };
 
     private int _currentIndex = 0;
 
@@ -28,7 +24,7 @@ public class UISelector : MonoBehaviour
         }
         private set
         {
-            int newValue = Mathf.Clamp (value, 0, options.Length -1);
+            int newValue = Mathf.Clamp (value, 0, options.Length - 1);
 
             if ( newValue == _currentIndex )
                 return;
@@ -38,7 +34,7 @@ public class UISelector : MonoBehaviour
         }
     }
 
-    public void Scroll(int offset )
+    public void Scroll ( int offset )
     {
         CurrentIndex += offset;
     }
@@ -50,7 +46,7 @@ public class UISelector : MonoBehaviour
         OnSelectorUpdate.Invoke (_currentIndex);
     }
 
-    public void SetIndexWithoutSaving (int index)
+    public void SetIndexWithoutSaving ( int index )
     {
         _currentIndex = Mathf.Clamp (index, 0, options.Length - 1);
 

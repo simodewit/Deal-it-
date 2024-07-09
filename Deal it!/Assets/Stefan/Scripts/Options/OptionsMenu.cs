@@ -20,13 +20,13 @@ public class OptionsMenu : MonoBehaviour
         var option = OptionsData.Saved;
 
         windowedResolution.SetIndexWithoutSaving (option.resolutionIndex);
-        fullscreenToggle.SetIsOnWithoutNotify (option.fullScreen);
+        fullscreenToggle.isOn = option.fullScreen;
 
-        mainVolumeSlider.SetValueWithoutNotify (option.mainVolume);
-        musicVolumeSlider.SetValueWithoutNotify (option.musicVolume);
-        sfxVolumeSlider.SetValueWithoutNotify (option.sfxVolume);
-        fovSlider.SetValueWithoutNotify (option.fov);
-        sensitivitySlider.SetValueWithoutNotify (option.sensitivity);
+        mainVolumeSlider.value = option.mainVolume;
+        musicVolumeSlider.value = option.musicVolume;
+        sfxVolumeSlider.value = option.sfxVolume;
+        fovSlider.value = option.fov;
+        sensitivitySlider.value = option.sensitivity;
     }
 
     private void OnDisable ( )
