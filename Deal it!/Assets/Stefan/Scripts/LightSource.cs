@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Runtime.Serialization;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class LightSource : MonoBehaviour
 {
-    [Header("Light Settings")]
+    [Header ("Light Settings")]
     public Gradient colorGradient;
 
     public float speed = 0.2f;
@@ -24,7 +19,7 @@ public class LightSource : MonoBehaviour
     [Header ("References")]
     public MeshRenderer lightRenderer;
     public MeshRenderer emissionRenderer;
-    public Light ligth;
+    public Light lightsource;
 
     Color color;
     Material m_emissionMaterial;
@@ -33,16 +28,19 @@ public class LightSource : MonoBehaviour
     float m_currentTime;
 
     // Start is called before the first frame update
-    void Start()
+    void Start ( )
     {
         m_currentTime = UnityEngine.Random.Range (minMaxStartOffset.x, minMaxStartOffset.y);
 
-        m_lightBeamMaterial = lightRenderer.sharedMaterial = new Material (lightRenderer.material);
-        m_emissionMaterial = emissionRenderer.sharedMaterial = new Material (emissionRenderer.material);
+        if ( lightRenderer )
+            m_lightBeamMaterial = lightRenderer.sharedMaterial = new Material (lightRenderer.material);
+
+        if ( emissionRenderer )
+            m_emissionMaterial = emissionRenderer.sharedMaterial = new Material (emissionRenderer.material);
     }
 
     // Update is called once per frame
-    void Update()
+    void Update ( )
     {
         HandleColors ( );
 
@@ -60,17 +58,27 @@ public class LightSource : MonoBehaviour
 
         color = colorGradient.Evaluate (m_currentTime);
 
-        m_lightBeamMaterial.SetColor ("_Light_Color", color);
-        m_lightBeamMaterial.SetColor ("_Emission", color);
+        if ( lightRenderer )
+        {
+            m_lightBeamMaterial.SetColor ("_Light_Color", color);
+            m_lightBeamMaterial.SetColor ("_Emission", color);
+        }
 
-        m_emissionMaterial.color = color;
-        m_emissionMaterial.SetColor ("_EmissionColor", color);
+        if ( emissionRenderer )
+        {
+            m_emissionMaterial.color = color;
+            m_emissionMaterial.SetColor ("_EmissionColor", color);
 
-        ligth.color = color;
+        }
 
-        float flickerStrength = Mathf.PerlinNoise1D (Time.time * flickerSpeed) + 1 / 2;
+        if ( lightsource )
+        {
+            lightsource.color = color;
 
-        ligth.intensity = Mathf.Lerp (minMaxIntensity.x, minMaxIntensity.y, flickerStrength);
+            float flickerStrength = Mathf.PerlinNoise1D (Time.time * flickerSpeed) + 1 / 2;
+
+            lightsource.intensity = Mathf.Lerp (minMaxIntensity.x, minMaxIntensity.y, flickerStrength);
+        }
     }
 
     void HandleRotation ( )

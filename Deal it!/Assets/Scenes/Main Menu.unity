@@ -217,6 +217,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 643363334856444613, guid: 448bf4a97fb2521458f19ad9f1eb0955,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 721866548242031814, guid: 448bf4a97fb2521458f19ad9f1eb0955,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -326,11 +331,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799974436007716883, guid: 448bf4a97fb2521458f19ad9f1eb0955,
-        type: 3}
-      propertyPath: m_Name
-      value: Disco Ball
       objectReference: {fileID: 0}
     - target: {fileID: 2826392581005656385, guid: 448bf4a97fb2521458f19ad9f1eb0955,
         type: 3}
@@ -625,31 +625,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2799974436007716883, guid: 448bf4a97fb2521458f19ad9f1eb0955,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 40986799}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 448bf4a97fb2521458f19ad9f1eb0955, type: 3}
---- !u!1 &40986798 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2799974436007716883, guid: 448bf4a97fb2521458f19ad9f1eb0955,
-    type: 3}
-  m_PrefabInstance: {fileID: 40986797}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &40986799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40986798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17855d2885b99404881033a4555bfbd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 60
 --- !u!1 &82427238
 GameObject:
   m_ObjectHideFlags: 0

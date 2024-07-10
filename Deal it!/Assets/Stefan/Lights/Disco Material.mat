@@ -96,7 +96,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _Fade_Dst: 10.7
+    - _Fade_Dst: 134.8
     - _Flicker_speed: 0.064
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -104,7 +104,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _Power: 36.42
+    - _Power: 58.5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -123,7 +123,7 @@ Material:
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flicker_Strength: {r: 0.5, g: 1, b: 0, a: 0}
-    - _Light_Color: {r: 0, g: 1.153783, b: 1.3977197, a: 1}
+    - _Light_Color: {r: 0, g: 4.6151333, b: 5.590881, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &6747516810067307622
