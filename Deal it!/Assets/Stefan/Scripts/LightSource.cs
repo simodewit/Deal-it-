@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using Unity.Mathematics;
 using UnityEngine;
@@ -15,7 +16,12 @@ public class LightSource : MonoBehaviour
     public float flickerSpeed = 13;
     public Vector2 minMaxIntensity;
 
-    [Header("References")]
+    [Header ("Rotation Settings")]
+    public Vector3 rotationSpeed;
+    public Vector3 rotationStrength;
+    public Transform rotationTarget;
+
+    [Header ("References")]
     public MeshRenderer lightRenderer;
     public MeshRenderer emissionRenderer;
     public Light ligth;
@@ -38,9 +44,16 @@ public class LightSource : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandleColors ( );
+
+        HandleRotation ( );
+    }
+
+    void HandleColors ( )
+    {
         m_currentTime += Time.deltaTime * speed;
 
-        while(m_currentTime > 1 )
+        while ( m_currentTime > 1 )
         {
             m_currentTime -= 1;
         }
@@ -58,5 +71,17 @@ public class LightSource : MonoBehaviour
         float flickerStrength = Mathf.PerlinNoise1D (Time.time * flickerSpeed) + 1 / 2;
 
         ligth.intensity = Mathf.Lerp (minMaxIntensity.x, minMaxIntensity.y, flickerStrength);
+    }
+
+    void HandleRotation ( )
+    {
+        Vector3 rotation = new Vector3 ( )
+        {
+            x = Mathf.Sin (rotationSpeed.x * Time.time) * rotationStrength.x,
+            y = Mathf.Sin (rotationSpeed.y * Time.time) * rotationStrength.y,
+            z = Mathf.Sin (rotationSpeed.z * Time.time) * rotationStrength.z,
+        };
+
+        rotationTarget.Rotate (rotation);
     }
 }
