@@ -28,6 +28,8 @@ public class Movement : MonoBehaviour
     {
         speed = walkSpeed;
         rb = GetComponent<Rigidbody>();
+
+        rotateSpeed = OptionsData.Saved.sensitivity;
     }
 
     private void Update()

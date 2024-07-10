@@ -16,8 +16,8 @@ public class OptionsData
         mainVolume = 1,
         musicVolume = 1,
         sfxVolume = 1,
-        fov = 80,
-        sensitivity = 25,
+        fov = 75,
+        sensitivity = 10,
     };
 
     public int resolutionIndex;

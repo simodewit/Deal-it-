@@ -986,7 +986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &355402266
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1456,7 +1456,7 @@ PrefabInstance:
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 40.21997
+      value: 44.43
       objectReference: {fileID: 0}
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
@@ -1723,10 +1723,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1757025564}
   m_HandleRect: {fileID: 2105300287}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 50
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.68
+  m_Value: 75
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2699,8 +2699,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1847727397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.68, y: 0}
-  m_AnchorMax: {x: 0.68, y: 1}
+  m_AnchorMin: {x: 0.2, y: 0}
+  m_AnchorMax: {x: 0.2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 17.0089, y: 14.955}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3846,12 +3846,12 @@ PrefabInstance:
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 87.59
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 44.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
@@ -4151,7 +4151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1159269430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4845,12 +4845,12 @@ PrefabInstance:
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 134.86
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 44.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
@@ -5034,12 +5034,12 @@ PrefabInstance:
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 123.88
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 44.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
@@ -5456,10 +5456,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 2010671890}
   m_HandleRect: {fileID: 741388201}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 5
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0.68
+  m_Value: 8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -6244,7 +6244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 178.47992, y: -278.2}
+  m_AnchoredPosition: {x: 178.47992, y: -193.8}
   m_SizeDelta: {x: 356.9598, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1586529651
@@ -6743,7 +6743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1720891911
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7248,7 +7248,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.68
+  m_FillAmount: 0.5
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -8163,7 +8163,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.68
+  m_FillAmount: 0.2
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -8514,8 +8514,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2094907334}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.68, y: 0}
-  m_AnchorMax: {x: 0.68, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 17.0089, y: 14.955}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9422,12 +9422,12 @@ PrefabInstance:
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 83.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 44.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 809976645634571285, guid: e044f160bd798764a829de79d35c5374,
         type: 3}
