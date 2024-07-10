@@ -85,7 +85,7 @@ MonoBehaviour:
   rotationTarget: {fileID: 4580402297084246552}
   lightRenderer: {fileID: 8610123042594468969}
   emissionRenderer: {fileID: 6629528029072877667}
-  ligth: {fileID: 1906505532169905551}
+  lightsource: {fileID: 1906505532169905551}
 --- !u!1 &6298519497451220928
 GameObject:
   m_ObjectHideFlags: 0
