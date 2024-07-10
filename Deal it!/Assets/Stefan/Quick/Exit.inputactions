@@ -1,0 +1,45 @@
+{
+    "name": "Exit",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "b410f928-af71-4501-8608-b28cac6ddefe",
+            "actions": [
+                {
+                    "name": "Exot",
+                    "type": "Button",
+                    "id": "10217eb8-e452-4644-ad4d-3f1015755381",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "afca72e3-aa44-47be-bcdd-3b6759927184",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8f04e316-d3e1-48b2-b132-e7cc4f3da126",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
